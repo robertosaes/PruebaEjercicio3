@@ -1,0 +1,29 @@
+logging:
+  register-shutdown-hook: true
+
+server:
+  servlet:
+    context-path: /
+  port: 8088
+  
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    continue-on-error: true
+    url: jdbc:mysql://172.16.25.73:3306/mysql?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+#    driver-class-name: com.mysql.jdbc.Driver
+    username: IMGv2
+    password: TDC_IMGv2
+    hikari:
+      pool-name: mysql-pool
+      auto-commit: true
+      maximum-pool-size: 20
+      minimum-idle: 10
+      connection-test-query: SELECT 'ABC'
+      max-lifetime: 60000
+
+
+logbook:
+  filter:
+    enabled: true
+    
