@@ -12,3 +12,22 @@ Creacion de tabla:
     DIRECCION VARCHAR(100)
 );
 
+Servicios REST:
+
+POST: http://localhost:8088/empresa
+Json:
+
+{
+    "nombre": "BYTE3",
+    "nit": "7890123-7",
+    "fechaFundacion": "2015-12-01",
+    "direccion": "Mixco"
+}
+
+GET: http://localhost:8088/empresa (Todas las empresas)
+
+GET: http://localhost:8088/empresa/{id}
+
+PUT: http://localhost:8088/empresa/{id}
+
+DELETE: http://localhost:8088/empresa/{id}
